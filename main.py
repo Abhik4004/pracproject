@@ -21,11 +21,10 @@ answer.grid(column=0, row=1)
 
 def button_clicked():
     print("I am working")
-    miles = input.get()
+    miles = float(input.get())
     print(miles, type(miles))
-    miles = int(miles)
-    print(type(miles))
     km = miles*km_convert_value
+    km = int(km)
     answer.config(text=f"is equal to    {km}   Km", font=("Arial"))
 
 button = Button(text="Calculate", command=button_clicked)
